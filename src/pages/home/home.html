@@ -7,11 +7,28 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
-
+<ion-content padding >
+  <h3>Biblioteca Digital</h3>
+  <ion-card><!--Inicio do card-->
+      <img src= "../assets/imgs/homeLivroFilmes.png" > 
+    <ion-card-header>
+      <ion-card-title>BiblioApp</ion-card-title><!--Titulo da parte do carde-->
+    </ion-card-header>
+    <ion-card-content>Este app tem obejtivo para que usuários possam trocar experiencias e informaçãos sobre livros e filmes</ion-card-content>  
+  </ion-card>
+  
+  
+  <ion-item (click)="irParaLivrosPage ()">
+    <button ion-button><ion-icon name = "book"></ion-icon></button>
+  </ion-item><!--Botão ir para pagina livros-->
+  
+  <a (click)="goToFilmesPage()">
+    <button ion-button><ion-icon name = "videocam"></ion-icon></button>
+  </a><!--Botão ir para pagina livros-->
+  
+    
   <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> 
   </p>
 
   <button ion-button secondary menuToggle>Toggle Menu</button>

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>livros</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+    <ion-list>
+        <ion-item *ngFor="let livro of livros">
+          <h2>{{livro.titulo}}</h2>
+          <p>{{livro.autor}}</p>
+          <button (click)="irParaDestinoLivro(livro)">Mais Inf</button>  
+        </ion-item>
+      </ion-list>
+</ion-content>

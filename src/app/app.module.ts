@@ -6,12 +6,14 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LivrosPage } from '../pages/livros/livros';
+import { FilmesPage } from '../pages/filmes/filmes';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { FilmesPage } from '../pages/filmes/filmes';
 import { DestinoLivroPage } from '../pages/destino-livro/destino-livro';
+import { HttpModule } from "@angular/http";
+import { MovieProvider } from '../providers/movie/movie';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { DestinoLivroPage } from '../pages/destino-livro/destino-livro';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +42,8 @@ import { DestinoLivroPage } from '../pages/destino-livro/destino-livro';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MovieProvider
   ]
 })
 export class AppModule {}
